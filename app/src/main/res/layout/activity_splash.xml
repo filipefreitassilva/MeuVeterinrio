@@ -11,9 +11,9 @@
         android:id="@+id/imageView8"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:layout_weight="1"
-        app:srcCompat="@drawable/splash_img"
-        tools:ignore="ContentDescription"/>
+        app:srcCompat="@drawable/splash_meuvet"
+        tools:ignore="ContentDescription" />
 
 </LinearLayout>

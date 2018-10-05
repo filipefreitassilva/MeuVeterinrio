@@ -18,10 +18,8 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="C:\Users\Filipe Freitas\Desktop\IMG_1918.JPG" />
-                                      <entry key="foregroundLayerName" value="ic_launcher_foreground" />
-                                      <entry key="outputName" value="perfil_filipe" />
+                                      <entry key="foregroundImage" value="D:\Arquivos PC\Trabalho - PhotoShop\Meu vet\icon_meuvet.png" />
+                                      <entry key="outputName" value="meuvet_icon" />
                                     </map>
                                   </option>
                                 </PersistentState>
