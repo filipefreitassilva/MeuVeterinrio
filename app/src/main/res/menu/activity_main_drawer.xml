@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_minhaconta"
+            android:icon="@drawable/ic_menu_minhaconta"
+            android:title="Minha Conta" />
+        <item
+            android:id="@+id/nav_meusanimais"
+            android:icon="@drawable/ic_menu_meusanimais"
+            android:title="Meus Animais" />
+        <item
+            android:id="@+id/nav_consultas"
+            android:icon="@drawable/ic_menu_consultas"
+            android:title="Consultas" />
+        <item
+            android:id="@+id/nav_clinicas"
+            android:icon="@drawable/ic_menu_clinicas"
+            android:title="Clínicas" />
+        <item
+            android:id="@+id/nav_forum"
+            android:icon="@drawable/ic_menu_forum"
+            android:title="Fórum" />
+        <item
+                android:id="@+id/nav_sair"
+                android:icon="@drawable/ic_menu_sair"
+                android:title="Sair" />
+
+
+    </group>
+
+</menu>
