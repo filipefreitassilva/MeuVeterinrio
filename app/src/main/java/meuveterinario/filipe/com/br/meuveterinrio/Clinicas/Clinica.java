@@ -1,16 +1,18 @@
 package meuveterinario.filipe.com.br.meuveterinrio.Clinicas;
 
+import android.graphics.Bitmap;
+
 public class Clinica {
 
     private int clinicaId;
-    private String imagemClinica;
+    private Bitmap imagemClinica;
     private String nomeClinica;
     private String telefoneClinica;
     private String enderecoClinica;
     private String medicoClinica;
 
     public Clinica(){}
-    public Clinica(int clinicaId, String imagemClinica, String nomeClinica, String telefoneClinica, String enderecoClinica, String medicoClinica){
+    public Clinica(int clinicaId, Bitmap imagemClinica, String nomeClinica, String telefoneClinica, String enderecoClinica, String medicoClinica){
         this.clinicaId = clinicaId;
         this.imagemClinica = imagemClinica;
         this.nomeClinica = nomeClinica;
@@ -61,11 +63,11 @@ public class Clinica {
         this.medicoClinica = medicoClinica;
     }
 
-    public String getImagemClinica() {
+    public Bitmap getImagemClinica() {
         return imagemClinica;
     }
 
-    public void setImagemClinica(String imagemClinica) {
+    public void setImagemClinica(Bitmap imagemClinica) {
         this.imagemClinica = imagemClinica;
     }
 

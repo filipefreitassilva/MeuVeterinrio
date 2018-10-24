@@ -1,6 +1,8 @@
 package meuveterinario.filipe.com.br.meuveterinrio.Clinicas;
 
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -41,11 +43,11 @@ public class Fragment_clinicas extends Fragment {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
 
-        this.listaClinicas.add(new Clinica(1, "Clinica Palmas", "Clinica Palmas", "9879879879", "Rua Barão", "José Pereira"));
-        this.listaClinicas.add(new Clinica(1, "Clinica Palmas", "Clinica Palmas", "9879879879", "Rua Barão", "José Pereira"));
-        this.listaClinicas.add(new Clinica(1, "Clinica Palmas", "Clinica Palmas", "9879879879", "Rua Barão", "José Pereira"));
-        this.listaClinicas.add(new Clinica(1, "Clinica Palmas", "Clinica Palmas", "9879879879", "Rua Barão", "José Pereira"));
-        this.listaClinicas.add(new Clinica(1, "Clinica Palmas", "Clinica Palmas", "9879879879", "Rua Barão", "José Pereira"));
+        this.listaClinicas.add(new Clinica(1, BitmapFactory.decodeResource(getResources(), R.drawable.clinica1), "Clinica Palmas", "9879879879", "Rua Barão", "José Pereira"));
+        this.listaClinicas.add(new Clinica(1, BitmapFactory.decodeResource(getResources(), R.drawable.clinica2), "Clinica Palmas", "9879879879", "Rua Barão", "José Pereira"));
+        this.listaClinicas.add(new Clinica(1, BitmapFactory.decodeResource(getResources(), R.drawable.clinica1), "Clinica Palmas", "9879879879", "Rua Barão", "José Pereira"));
+        this.listaClinicas.add(new Clinica(1, BitmapFactory.decodeResource(getResources(), R.drawable.clinica1), "Clinica Palmas", "9879879879", "Rua Barão", "José Pereira"));
+        this.listaClinicas.add(new Clinica(1, BitmapFactory.decodeResource(getResources(), R.drawable.clinica1), "Clinica Palmas", "9879879879", "Rua Barão", "José Pereira"));
 
         clinicaAdapter = new ClinicaAdapter(this.listaClinicas);
 

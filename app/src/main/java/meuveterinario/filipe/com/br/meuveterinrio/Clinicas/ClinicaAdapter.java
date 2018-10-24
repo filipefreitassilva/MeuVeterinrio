@@ -1,6 +1,7 @@
 package meuveterinario.filipe.com.br.meuveterinrio.Clinicas;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -40,6 +41,11 @@ public class ClinicaAdapter extends RecyclerView.Adapter<ClinicaHolder>{
         holder.getNomeClinica().setText(clinica.getNomeClinica());
         final int id = clinica.getClinicaId();
         clinica.getImagemClinica();
+
+
+
+        holder.getImagemClinica().setImageBitmap(clinica.getImagemClinica());
+
 
         //.setImageResource(R.drawable.my_image);
         //Picasso.get().load(serie.getSerieImage()).into(holder.getSerieBackdrop());
