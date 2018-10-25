@@ -2,6 +2,7 @@ package meuveterinario.filipe.com.br.meuveterinrio;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,6 +14,10 @@ import android.view.MenuItem;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import meuveterinario.filipe.com.br.meuveterinrio.Clinicas.Fragment_clinicas;
 import meuveterinario.filipe.com.br.meuveterinrio.Consultas.Fragment_consultas;
@@ -24,6 +29,11 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
         private Button button_login, button_cadastrar;
+        private FirebaseAuth auth;
+        private FirebaseUser user;
+
+        private FirebaseAuth.AuthStateListener authStateListener;
+
 
     FragmentTransaction fragmentTransaction;
 
@@ -52,7 +62,26 @@ public class MainActivity extends AppCompatActivity
         button_login.setOnClickListener(this);
         button_cadastrar.setOnClickListener(this);
 
+        auth = FirebaseAuth.getInstance();
 
+        estadoAutenticacao();
+    }
+
+    private void estadoAutenticacao(){
+        authStateListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+               FirebaseUser user = firebaseAuth.getCurrentUser();
+
+               if(user != null){
+
+                   Toast.makeText(getBaseContext(), "Usuário" + user.getEmail() + "está logado", Toast.LENGTH_LONG).show();
+               }else{
+
+
+               }
+            }
+        };
     }
 
     @Override
@@ -142,15 +171,36 @@ public class MainActivity extends AppCompatActivity
         switch (v.getId()){
             case R.id.button_login:
                 //execcutar um comando
+                user = auth.getCurrentUser();
+                if (user == null) {
+
+                    startActivity(new Intent(this, LoginEmailActivity.class));
+                }else {
+                    startActivity(new Intent(this, PrincipalActivity.class));
+                }
 
                 break;
 
             case R.id.button_cadastrar:
                 //executar comando
-            Intent intent = new Intent(this, CadastrarActivity.class);
-            startActivity(intent);
+
+            startActivity(new Intent(this, CadastrarActivity.class));
 
                 break;
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        auth.addAuthStateListener(authStateListener);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(authStateListener != null){
+            auth.removeAuthStateListener(authStateListener);
         }
     }
 }
