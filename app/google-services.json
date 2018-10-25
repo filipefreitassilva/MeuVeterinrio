@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "543764823963",
+    "firebase_url": "https://meuveterinario-f1b5f.firebaseio.com",
+    "project_id": "meuveterinario-f1b5f",
+    "storage_bucket": "meuveterinario-f1b5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543764823963:android:13e6fbde8ef6a3a1",
+        "android_client_info": {
+          "package_name": "meuveterinario.filipe.com.br.meuveterinrio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "543764823963-7te188hhb1rt2898ddl8khotur4ejdlf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "meuveterinario.filipe.com.br.meuveterinrio",
+            "certificate_hash": "acc700163d7e7604f418c284139bc3ec738682fd"
+          }
+        },
+        {
+          "client_id": "543764823963-vid9m1a0kgf9pugthv0iuinllvkjlb6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrjcFTKGnjHWRVmfjwcnFP_oq6fMJ5WJ8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "543764823963-vid9m1a0kgf9pugthv0iuinllvkjlb6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
