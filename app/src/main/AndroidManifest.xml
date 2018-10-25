@@ -26,6 +26,8 @@
 
         </activity>
 
+        <activity android:name=".CadastrarActivity"></activity>
+
     </application>
 
 </manifest>

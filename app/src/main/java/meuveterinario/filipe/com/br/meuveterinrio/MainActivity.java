@@ -1,5 +1,6 @@
 package meuveterinario.filipe.com.br.meuveterinrio;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -10,6 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.FragmentTransaction;
+import android.view.View;
+import android.widget.Button;
 
 import meuveterinario.filipe.com.br.meuveterinrio.Clinicas.Fragment_clinicas;
 import meuveterinario.filipe.com.br.meuveterinrio.Consultas.Fragment_consultas;
@@ -18,13 +21,9 @@ import meuveterinario.filipe.com.br.meuveterinrio.MeusAnimais.Fragment_meusanima
 import meuveterinario.filipe.com.br.meuveterinrio.MinhaConta.Fragment_minhaconta;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
-
-
-
-
-
+        private Button button_login, button_cadastrar;
 
     FragmentTransaction fragmentTransaction;
 
@@ -47,6 +46,11 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        button_login = (Button) findViewById(R.id.button_login);
+        button_cadastrar = (Button) findViewById(R.id.button_cadastrar);
+
+        button_login.setOnClickListener(this);
+        button_cadastrar.setOnClickListener(this);
 
 
     }
@@ -131,5 +135,22 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.button_login:
+                //execcutar um comando
+
+                break;
+
+            case R.id.button_cadastrar:
+                //executar comando
+            Intent intent = new Intent(this, CadastrarActivity.class);
+            startActivity(intent);
+
+                break;
+        }
     }
 }
