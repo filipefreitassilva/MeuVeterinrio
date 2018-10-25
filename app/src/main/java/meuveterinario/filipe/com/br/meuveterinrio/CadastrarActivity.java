@@ -102,28 +102,6 @@ public class CadastrarActivity extends AppCompatActivity implements View.OnClick
 
     }
 
-    private void opcoesErro(String resposta) {
-        if (resposta.contains("Password should be at least 6 characters")) {
-
-            Toast.makeText(getBaseContext(), "Digite uma senha maior que 5 caracteres!", Toast.LENGTH_LONG).show();
-
-        } else if (resposta.contains("The email address is badly formatted")) {
-
-            Toast.makeText(getBaseContext(), "Formato de e-mail inválido!", Toast.LENGTH_LONG).show();
-
-        } else if (resposta.contains("address is already")) {
-
-            Toast.makeText(getBaseContext(), "E-mail já existe cadastrado!", Toast.LENGTH_LONG).show();
-
-        } else if (resposta.contains("interrupted connection")) {
-
-            Toast.makeText(getBaseContext(), "Sem conexão com o Firebase!", Toast.LENGTH_LONG).show();
-
-        } else {
-            Toast.makeText(getBaseContext(), resposta, Toast.LENGTH_LONG).show();
-        }
-
-    }
 
 
 }
