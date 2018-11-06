@@ -32,5 +32,11 @@ dependencies {
 
     //autenticação por e-mail
     implementation 'com.google.firebase:firebase-auth:16.0.5'
+
+    //autenticacao google
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+
+    //autenticação facebook
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
 }
 apply plugin: 'com.google.gms.google-services'

@@ -25,6 +25,10 @@
             android:icon="@drawable/ic_menu_forum"
             android:title="Fórum" />
         <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_menu_minhaconta"
+            android:title="Login" />
+        <item
                 android:id="@+id/nav_sair"
                 android:icon="@drawable/ic_menu_sair"
                 android:title="Sair" />
