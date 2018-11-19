@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Clinicas.Fragment_clinicas">
+    tools:context=".Clinicas.Fragment_clinicas"
+    android:background="#2EF2C1">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycleClinica"
