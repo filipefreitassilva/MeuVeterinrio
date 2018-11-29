@@ -40,7 +40,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:16.0.5'
 
     //carregamento de imagens
-    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.squareup.picasso:picasso:2.5.1'
 
     //autenticacao google
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
@@ -48,12 +48,12 @@ dependencies {
     //autenticação facebook
     implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
 
-    //webservice
+//webservice
     implementation 'com.squareup.okhttp3:okhttp-ws:3.2.0'
     implementation 'org.kie.modules:com-google-code-gson:6.5.0.Final'
 }
-configurations.all {
-    // OkHttp 3.5.0+ includes the websockets API, so we need this to prevent a conflict
-    exclude module: 'okhttp-ws'
-}
+//
+//configurations.all {
+//    // OkHttp 3.5.0+ includes the websockets API, so we need this to prevent a conflict
+//    exclude module: 'okhttp-ws' }
 apply plugin: 'com.google.gms.google-services'

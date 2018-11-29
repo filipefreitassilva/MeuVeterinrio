@@ -65,8 +65,8 @@ public class Activity_login extends AppCompatActivity
         cardView_loginEmail.setOnClickListener(this);
         cardView_cadastrar.setOnClickListener(this);
 
-        mostra_email = (TextView) findViewById(R.id.mostra_email);
-        mostra_nome = (TextView) findViewById(R.id.mostra_nome);
+//        mostra_email = (TextView) findViewById(R.id.mostra_email);
+//        mostra_nome = (TextView) findViewById(R.id.mostra_nome);
 
         auth = FirebaseAuth.getInstance();
 

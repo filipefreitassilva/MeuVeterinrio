@@ -16,6 +16,7 @@ public class Usuario {
     private String endereco;
     private String cidade;
     private String estado;
+
    // private ImageView imagemPerfil;
 
     private String email;
