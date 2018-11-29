@@ -4,20 +4,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -81,6 +69,7 @@ public class Activity_login extends AppCompatActivity
         mostra_nome = (TextView) findViewById(R.id.mostra_nome);
 
         auth = FirebaseAuth.getInstance();
+
 
         estadoAutenticacao();
 
@@ -150,12 +139,14 @@ public class Activity_login extends AppCompatActivity
 
                 if (user != null) {
 
-                    Toast.makeText(getBaseContext(), "Usuário" + user.getEmail() + "está logado", Toast.LENGTH_LONG).show();
-                } else {
+                        Toast.makeText(getBaseContext(), "Usuário" + user.getEmail() + "está logado", Toast.LENGTH_LONG).show();
+                    }
+                    else {
 
 
+                    }
                 }
-            }
+
         };
     }
 
@@ -172,7 +163,7 @@ public class Activity_login extends AppCompatActivity
             case R.id.cardView_cadastrar:
                 //executar comando
 
-                startActivity(new Intent(this, CadastrarActivity.class));
+                startActivity(new Intent(this, cadastrarUsuario.class));
 
                 break;
 
@@ -190,7 +181,10 @@ public class Activity_login extends AppCompatActivity
 
             case R.id.cardView_loginAnonimo:
 
-                signInAnonimo();
+               // signInAnonimo();
+
+                startActivity(new Intent(this, MainActivityVisitante.class));
+
 
                 break;
         }
@@ -214,12 +208,14 @@ public class Activity_login extends AppCompatActivity
 
         if (account == null) {
             Intent intent = googleSignInClient.getSignInIntent();
+
             startActivityForResult(intent, 555);
 
         } else {
             ///já tem algum usuario conectado
             Toast.makeText(getBaseContext(), "Já existe alguem logado!", Toast.LENGTH_LONG).show();
-            startActivity(new Intent(getBaseContext(), MainActivity.class));
+            finish();
+            startActivity(new Intent(getBaseContext(), MainActivityLogado.class));
 
 
         }
@@ -232,7 +228,8 @@ public class Activity_login extends AppCompatActivity
 
             startActivity(new Intent(this, LoginEmailActivity.class));
         } else {
-            startActivity(new Intent(this, MainActivity.class));
+            finish();
+            startActivity(new Intent(this, MainActivityLogado.class));
 
         }
     }
@@ -246,7 +243,8 @@ public class Activity_login extends AppCompatActivity
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            startActivity(new Intent(getBaseContext(), PrincipalActivity.class));
+                            finish();
+                            startActivity(new Intent(getBaseContext(), MainActivityVisitante.class));
                         } else {
 
                             Toast.makeText(getBaseContext(), "Erro ao logar anonimo", Toast.LENGTH_LONG).show();
@@ -266,7 +264,8 @@ public class Activity_login extends AppCompatActivity
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            startActivity(new Intent(getBaseContext(), MainActivity.class));
+                            finish();
+                            startActivity(new Intent(getBaseContext(), MainActivityLogado.class));
                         } else {
                             Toast.makeText(getBaseContext(), "Erro ao logar com a conta do Facebook", Toast.LENGTH_LONG).show();
                         }
@@ -286,7 +285,8 @@ public class Activity_login extends AppCompatActivity
 
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            startActivity(new Intent(getBaseContext(), MainActivity.class));
+                            finish();
+                            startActivity(new Intent(getBaseContext(), MainActivityLogado.class));
 
                         } else {
                             // If sign in fails, display a message to the user.

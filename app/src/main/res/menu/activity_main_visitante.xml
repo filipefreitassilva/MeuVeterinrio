@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_promocoes"
+            android:icon="@drawable/ic_menu_promocoes"
+            android:title="Promoções" />
+        <item
+            android:id="@+id/nav_clinicas"
+            android:icon="@drawable/ic_menu_clinicas"
+            android:title="Clínicas" />
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_menu_minhaconta"
+            android:title="Login" />
+
+
+
+    </group>
+
+</menu>

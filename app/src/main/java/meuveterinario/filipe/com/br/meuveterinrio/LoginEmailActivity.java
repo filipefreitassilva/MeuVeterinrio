@@ -117,7 +117,7 @@ public class LoginEmailActivity extends AppCompatActivity implements View.OnClic
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    startActivity(new Intent(getBaseContext(), PrincipalActivity.class));
+                    startActivity(new Intent(getBaseContext(), MainActivityLogado.class));
                     Toast.makeText(getBaseContext(), "Usuário logado com sucesso!", Toast.LENGTH_LONG).show();
                     finish();
                 } else {

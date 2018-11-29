@@ -17,6 +17,10 @@
             android:icon="@drawable/ic_menu_consultas"
             android:title="Consultas" />
         <item
+            android:id="@+id/nav_promocoes"
+            android:icon="@drawable/ic_menu_promocoes"
+            android:title="Promoções" />
+        <item
             android:id="@+id/nav_clinicas"
             android:icon="@drawable/ic_menu_clinicas"
             android:title="Clínicas" />
